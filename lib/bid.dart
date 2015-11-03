@@ -5,21 +5,10 @@ class Bidder {
   final int receiptPoint;
   final int deliveryPoint;
 
-  const Bidder(this.name, this.bid, this.volume,
-      this.receiptPoint, this.deliveryPoint);
+  const Bidder(
+      this.name, this.bid, this.volume, this.receiptPoint, this.deliveryPoint);
 
   int get sale => bid * volume;
-}
-
-bool canAccept(List<Bidder> bids, {int capacity: 500}) {
-  var caps = new List.filled(10, 0);
-  for (var bidder in bids) {
-    for (var i = bidder.receiptPoint; i <= bidder.deliveryPoint; i++) {
-      caps[i] += bidder.volume;
-      if (caps[i] > capacity) return false;
-    }
-  }
-  return true;
 }
 
 const List<Bidder> bidders = const [

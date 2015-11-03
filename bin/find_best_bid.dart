@@ -3,11 +3,11 @@ import 'package:pipe_auction/auction.dart';
 
 main() {
   var bestBidders = mostProfitableAuction(bidders);
-  var profit = bestBidders.fold(0, (acc, bidder) => acc + bidder.sale);
+  var revenue = revenueFor(bestBidders);
 
   print('The best set of bidders is: ');
   for (var bidder in bestBidders) {
     print(bidder.name);
   }
-  print('The profit from this set of bidders is: \$$profit');
+  print('The revenue from this set of bidders is: \$$revenue');
 }
