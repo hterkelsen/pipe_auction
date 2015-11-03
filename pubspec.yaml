@@ -1,0 +1,11 @@
+name: 'pipe_auction'
+version: 0.0.1
+description: Brute force the solution to a combinatorial auction problem.
+author: Harry Terkelsen <harry.terkelsen@gmail.com>
+homepage: https://github.com/hterkelsen/pipe_auction
+
+environment:
+  sdk: '>=1.0.0 <2.0.0'
+
+dev_dependencies:
+  test: '^0.12.5'
